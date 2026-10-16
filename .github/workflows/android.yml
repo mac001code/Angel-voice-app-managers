@@ -1,26 +1,71 @@
-name: Android CI
+name: Android APK Build
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
-
+  build-apk:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: set up JDK 11
-      uses: actions/setup-java@v4
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-        cache: gradle
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Gradle 9.3.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
+
+      - name: Create debug.keystore if missing
+        run: |
+          if [ ! -f debug.keystore ]; then
+            keytool -genkeypair -v \
+              -keystore debug.keystore \
+              -storepass android \
+              -alias androiddebugkey \
+              -keypass android \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -dname "CN=Android Debug,O=Android,C=US"
+          fi
+
+      - name: Create local.properties if missing
+        run: |
+          if [ ! -f local.properties ]; then
+            echo "GEMINI_API_KEY=placeholder" >> local.properties
+          fi
+
+      - name: Build Debug APK
+        run: gradle assembleDebug --stacktrace
+
+      - name: Upload APK to Actions Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Angel-Voice-App-Managers-APK
+          path: app/build/outputs/apk/debug/*.apk
+
+      - name: Publish APK to GitHub Releases
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: "Angel Voice App Managers APK (Build #${{ github.run_number }})"
+          body: "APK compilado automáticamente listo para instalar en Android."
+          files: app/build/outputs/apk/debug/*.apk
