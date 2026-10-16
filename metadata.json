@@ -1,0 +1,6 @@
+{
+  "name": "Angel Voice",
+  "description": "Sistema Integral de Gestión y Aceleración de Creadores TikTok LIVE con Asistente Táctico Gemini",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Subtle Ambient Drop Shadow for 3D depth -->
+    <path
+        android:pathData="M38,34 C46,34 53,39 55,47 C57,44 60,39 65,33 C71,26 79,21 86,18 C83,23 80,28 77,33 C82,29 87,27 89,27 C84,33 80,38 76,43 C80,40 84,38 86,39 C81,45 76,50 72,54 C74,53 77,52 79,53 C74,59 69,63 64,66 C59,68 53,69 48,68 C44,72 40,78 37,84 C38,79 38,74 36,70 C31,69 27,65 24,60 C21,54 22,46 26,41 C29,36 33,34 38,34 Z"
+        android:fillColor="#55000000" />
+
+    <!-- 1. WING - LEADING PRIMARY FEATHER (Top longest blade) -->
+    <path
+        android:pathData="M54,42 C58,34 65,26 73,20 C79,16 85,14 88,13 C86,17 83,23 79,28 C73,34 65,40 57,45 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="54"
+                android:startY="14"
+                android:endX="88"
+                android:endY="45"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#F8FAFC" />
+                <item android:offset="0.45" android:color="#CBD5E1" />
+                <item android:offset="1.0" android:color="#64748B" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 2. WING - SECOND FEATHER -->
+    <path
+        android:pathData="M56,46 C62,39 70,32 77,26 C82,23 86,22 88,22 C85,27 80,33 75,39 C69,45 61,50 56,52 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="56"
+                android:startY="22"
+                android:endX="88"
+                android:endY="52"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="0.5" android:color="#94A3B8" />
+                <item android:offset="1.0" android:color="#475569" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 3. WING - THIRD FEATHER -->
+    <path
+        android:pathData="M56,53 C62,47 70,41 77,35 C82,31 85,31 87,31 C83,37 78,42 72,48 C66,54 60,57 55,58 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="55"
+                android:startY="31"
+                android:endX="87"
+                android:endY="58"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#F1F5F9" />
+                <item android:offset="0.5" android:color="#CBD5E1" />
+                <item android:offset="1.0" android:color="#64748B" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 4. WING - FOURTH FEATHER -->
+    <path
+        android:pathData="M55,59 C61,54 69,48 76,43 C80,40 83,41 84,41 C80,46 75,51 69,57 C63,62 57,64 53,64 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="53"
+                android:startY="40"
+                android:endX="84"
+                android:endY="64"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="0.55" android:color="#94A3B8" />
+                <item android:offset="1.0" android:color="#475569" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 5. WING - FIFTH FEATHER -->
+    <path
+        android:pathData="M53,64 C59,60 67,55 73,50 C77,48 79,48 80,49 C76,54 70,60 64,64 C59,67 54,68 51,68 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="51"
+                android:startY="48"
+                android:endX="80"
+                android:endY="68"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#E2E8F0" />
+                <item android:offset="0.6" android:color="#64748B" />
+                <item android:offset="1.0" android:color="#334155" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 6. WING - SIXTH & INNER TRAILING FEATHER -->
+    <path
+        android:pathData="M50,68 C55,65 62,61 68,57 C72,55 74,56 75,57 C70,62 65,66 59,69 C55,71 50,71 47,70 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="47"
+                android:startY="55"
+                android:endX="75"
+                android:endY="71"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#F8FAFC" />
+                <item android:offset="0.65" android:color="#94A3B8" />
+                <item android:offset="1.0" android:color="#475569" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 7. WING BASE CONNECTOR & SCULPTED SHOULDER -->
+    <path
+        android:pathData="M48,46 C52,43 55,38 56,34 C58,37 60,42 61,46 C58,49 54,54 51,58 C49,54 48,50 48,46 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="48"
+                android:startY="34"
+                android:endX="61"
+                android:endY="58"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="0.5" android:color="#CBD5E1" />
+                <item android:offset="1.0" android:color="#475569" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 8. CAMERA APERTURE OUTER RING -->
+    <path
+        android:pathData="M37,33 C46,33 53,39 54,48 C50,49 46,51 43,53 C41,47 37,43 32,41 C30,47 30,53 32,58 C26,57 23,52 23,47 C23,39 29,33 37,33 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="23"
+                android:startY="33"
+                android:endX="54"
+                android:endY="58"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#F1F5F9" />
+                <item android:offset="0.5" android:color="#94A3B8" />
+                <item android:offset="1.0" android:color="#475569" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 9. CAMERA APERTURE - TOP BLADE -->
+    <path
+        android:pathData="M33,35 L47,38 L42,48 L30,43 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="30"
+                android:startY="35"
+                android:endX="47"
+                android:endY="48"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="0.5" android:color="#CBD5E1" />
+                <item android:offset="1.0" android:color="#64748B" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 10. CAMERA APERTURE - UPPER RIGHT BLADE -->
+    <path
+        android:pathData="M47,39 L53,49 L43,55 L39,45 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="39"
+                android:startY="39"
+                android:endX="53"
+                android:endY="55"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#E2E8F0" />
+                <item android:offset="0.6" android:color="#94A3B8" />
+                <item android:offset="1.0" android:color="#334155" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 11. CAMERA APERTURE - LOWER RIGHT BLADE -->
+    <path
+        android:pathData="M52,50 L46,62 L36,58 L40,48 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="36"
+                android:startY="48"
+                android:endX="52"
+                android:endY="62"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="0.5" android:color="#CBD5E1" />
+                <item android:offset="1.0" android:color="#64748B" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 12. CAMERA APERTURE - BOTTOM BLADE & FLOURISH -->
+    <path
+        android:pathData="M44,61 L31,64 L31,52 L42,52 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="31"
+                android:startY="52"
+                android:endX="44"
+                android:endY="64"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#CBD5E1" />
+                <item android:offset="0.6" android:color="#64748B" />
+                <item android:offset="1.0" android:color="#334155" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 13. CAMERA APERTURE - LOWER LEFT BLADE -->
+    <path
+        android:pathData="M29,62 L22,53 L32,46 L37,56 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="22"
+                android:startY="46"
+                android:endX="37"
+                android:endY="62"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#F8FAFC" />
+                <item android:offset="0.55" android:color="#94A3B8" />
+                <item android:offset="1.0" android:color="#475569" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 14. LOWER EXTENDED WINGLET TAIL (Sculpted tip from the image) -->
+    <path
+        android:pathData="M23,61 C26,67 32,71 35,74 C36,78 36,83 35,86 C37,82 39,77 41,72 C37,70 33,67 29,63 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="23"
+                android:startY="61"
+                android:endX="41"
+                android:endY="86"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="0.5" android:color="#CBD5E1" />
+                <item android:offset="1.0" android:color="#475569" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 15. DELICATE APERTURE INNER HEXAGON HIGHLIGHT (Camera Center) -->
+    <path
+        android:pathData="M37,46 L42,47 L44,52 L40,55 L36,54 L34,49 Z"
+        android:fillColor="#151C26" />
+
+    <!-- 16. METALLIC BEVEL CONTOUR STROKES FOR 3D CHISELED EFFECT -->
+    <path
+        android:pathData="M88,13 C86,17 83,23 79,28 M88,22 C85,27 80,33 75,39 M87,31 C83,37 78,42 72,48 M84,41 C80,46 75,51 69,57 M80,49 C76,54 70,60 64,64 M75,57 C70,62 65,66 59,69"
+        android:strokeWidth="0.8"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="#00000000" />
+
+</vector>
